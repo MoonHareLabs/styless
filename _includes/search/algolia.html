@@ -32,8 +32,8 @@ const hitTemplate = function(hit) {
     <div class="search-item">
       <span class="search-meta">${date}</span>
       <h2><a class="search-link" href="${url}">${title}</a></h2>
-      {{#breadcrumbs}}<a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>{{/breadcrumbs}}
-      <div class="post-snippet">${content}</div>
+      {{#breadcrumbs}}<a href="${url}" class="search-breadcrumbs">${breadcrumbs}</a>{{/breadcrumbs}}
+      <div class="search-snippet">${content}</div>
     </div>
   `;
 }
@@ -64,32 +64,32 @@ search.start();
   max-width: 100%;
   margin-bottom: 15px;
 }
-.post-item {
+.search-item {
   margin-bottom: 30px;
 }
-.post-link .ais-Highlight {
+.search-link .ais-Highlight {
   color: #111;
   font-style: normal;
   text-decoration: underline;
 }
-.post-breadcrumbs {
+.search-breadcrumbs {
   color: #424242;
   display: block;
 }
-.post-breadcrumb {
+.search-breadcrumb {
   font-size: 18px;
   color: #424242;
 }
-.post-breadcrumb .ais-Highlight {
+.search-breadcrumb .ais-Highlight {
   font-weight: bold;
   font-style: normal;
 }
-.post-snippet .ais-Highlight {
+.search-snippet .ais-Highlight {
   color: #2a7ae2;
   font-style: normal;
   font-weight: bold;
 }
-.post-snippet img {
+.search-snippet img {
   display: none;
 }
 </style>
