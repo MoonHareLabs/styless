@@ -43,7 +43,7 @@ search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search-searchbar',
     placeholder: 'Search into posts...',
-    poweredBy: true
+    {% unless site.algolia.powered_by == false %}poweredBy: true,{% endunless %}
   })
 );
 
@@ -51,12 +51,18 @@ search.addWidget(
   instantsearch.widgets.hits({
     container: '#search-hits',
     templates: {
-      item: hitTemplate
+      item: hitTemplate,
+      empty: 'No Search Results.'
     }
   })
 );
 
-search.start();
+if (document.readyState != 'loading'){
+  search.start();
+} else {
+  document.addEventListener('DOMContentLoaded', function () { search.start(); });
+}
+
 </script>
 
 <style>
