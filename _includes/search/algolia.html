@@ -67,35 +67,18 @@ if (document.readyState != 'loading'){
 
 <style>
 .ais-search-box {
-  max-width: 100%;
-  margin-bottom: 15px;
+  padding-top: 1px;
 }
-.search-item {
-  margin-bottom: 30px;
+
+@media (min-width: 720px) {
+  .ais-search-box {
+    padding-left: 8px;
+  }
 }
-.search-link .ais-Highlight {
-  color: #111;
-  font-style: normal;
-  text-decoration: underline;
-}
-.search-breadcrumbs {
-  color: #424242;
-  display: block;
-}
-.search-breadcrumb {
-  font-size: 18px;
-  color: #424242;
-}
-.search-breadcrumb .ais-Highlight {
-  font-weight: bold;
-  font-style: normal;
-}
-.search-snippet .ais-Highlight {
-  color: #2a7ae2;
-  font-style: normal;
-  font-weight: bold;
-}
-.search-snippet img {
-  display: none;
+
+@media (min-width: 751px) {
+  .ais-search-box {
+    min-width: 176.3px; /* avoid layout shift */
+  }
 }
 </style>
